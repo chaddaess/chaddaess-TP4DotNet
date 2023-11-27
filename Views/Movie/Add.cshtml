@@ -6,6 +6,8 @@
 	<input type="hidden" asp-for="Id" />
 	<label asp-for="Name" class="control-label">Name</label>
 	<input type="text" asp-for="Name" />
+@* 	<label asp-for="UploadTime" class="control-label">Upload Time </label>
+	<input type="datetime" asp-for="UploadTime" /> *@
 	<label asp-for="GenreId" class="control-label">Genre</label>
 	<select asp-for="GenreId" asp-items="@(new SelectList(ViewBag.GenreNames))">
 		<option value="">-- Select --</option>

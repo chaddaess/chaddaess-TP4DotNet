@@ -1,0 +1,38 @@
+﻿@model List<TP4.Models.Customer>
+
+<h1>List of customers</h1>
+@if (ViewBag.Errors != null)
+{
+	<div class="text-red ml">
+		<ul>
+			@foreach (string error in ViewBag.Errors)
+			{
+				<li class="ml">@error</li>
+			}
+		</ul>
+	</div>
+}
+
+<table class="table">
+	<th>Name</th>
+	<th>Discount Rate</th>
+@foreach(Customer customer in Model)
+{
+	<tr>
+		<td>@customer.Name</td>
+			@{
+				if (customer.MembershipType!=null)
+				{
+					<td>@customer.MembershipType.DiscountRate %</td>
+
+				}
+				else
+				{
+					<td>no membership</td>
+
+				}
+			}
+
+	</tr>
+}	
+</table>

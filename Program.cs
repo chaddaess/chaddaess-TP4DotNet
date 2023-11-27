@@ -13,9 +13,13 @@ options.UseSqlServer(builder.Configuration.GetConnectionString("default")
 ));
 builder.Services.AddScoped<MovieRepository, MovieRepository>();
 builder.Services.AddScoped<GenreRepository, GenreRepository>();
+builder.Services.AddScoped<CustomerRepository, CustomerRepository>();
+builder.Services.AddScoped<MembershipTypeRepository, MembershipTypeRepository>();
 builder.Services.AddScoped<IMovieService, MovieService>();
 builder.Services.AddScoped<IGenreService, GenreService>();
 builder.Services.AddScoped<ICustomerService, CustomerService>();
+builder.Services.AddScoped<IMembershipService, MembershipService>();
+
 
 
 var app = builder.Build();

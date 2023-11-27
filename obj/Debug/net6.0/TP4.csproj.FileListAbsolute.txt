@@ -293,3 +293,4 @@ C:\Users\chadha\source\repos\TP4\obj\Debug\net6.0\refint\TP4.dll
 C:\Users\chadha\source\repos\TP4\obj\Debug\net6.0\TP4.pdb
 C:\Users\chadha\source\repos\TP4\obj\Debug\net6.0\TP4.genruntimeconfig.cache
 C:\Users\chadha\source\repos\TP4\obj\Debug\net6.0\ref\TP4.dll
+C:\Users\chadha\source\repos\TP4\bin\Debug\net6.0\Data\Genres.Json

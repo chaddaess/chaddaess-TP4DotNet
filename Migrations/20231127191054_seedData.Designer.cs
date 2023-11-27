@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using TP4.Models;
 
@@ -11,9 +12,11 @@ using TP4.Models;
 namespace TP4.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20231127191054_seedData")]
+    partial class seedData
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -78,13 +81,11 @@ namespace TP4.Migrations
                     b.HasData(
                         new
                         {
-                            Id = 6,
-                            GenreName = "Dystopian"
+                            Id = 6
                         },
                         new
                         {
-                            Id = 7,
-                            GenreName = "DarkAcademia"
+                            Id = 7
                         });
                 });
 
@@ -123,12 +124,6 @@ namespace TP4.Migrations
 
                     b.Property<string>("Name")
                         .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Photo")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<DateTime?>("UploadTime")
-                        .HasColumnType("datetime2");
 
                     b.HasKey("Id");
 
