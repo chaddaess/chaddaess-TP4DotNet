@@ -1,0 +1,11 @@
+﻿@model List<TP4.Models.Movie>
+
+@{
+	ViewBag.Title = "Movie";
+}
+
+<h2>All Movies</h2>
+@foreach(Movie movie  in Model)
+{
+	<li>@movie.Name</li>
+}

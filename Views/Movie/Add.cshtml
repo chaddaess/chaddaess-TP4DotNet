@@ -1,0 +1,27 @@
+﻿@model TP4.Models.Movie 
+
+<h2>Add a new movie </h2>
+
+<form asp-action="Add" class="form-control" method="post">
+	<input type="hidden" asp-for="Id" />
+	<label asp-for="Name" class="control-label">Name</label>
+	<input type="text" asp-for="Name" />
+	<label asp-for="GenreId" class="control-label">Genre</label>
+	<select asp-for="GenreId" asp-items="@(new SelectList(ViewBag.GenreNames))">
+		<option value="">-- Select --</option>
+	</select>
+	<div class="form-group">
+		<input type="submit" value="Save" class="btn btn-primary" />
+	</div>
+
+
+
+</form>
+
+<style>
+	form{
+		display:flex !important;
+		flex-direction:row !important;
+		justify-content:space-evenly;
+	}
+</style>
