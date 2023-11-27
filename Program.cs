@@ -15,6 +15,8 @@ builder.Services.AddScoped<MovieRepository, MovieRepository>();
 builder.Services.AddScoped<GenreRepository, GenreRepository>();
 builder.Services.AddScoped<IMovieService, MovieService>();
 builder.Services.AddScoped<IGenreService, GenreService>();
+builder.Services.AddScoped<ICustomerService, CustomerService>();
+
 
 var app = builder.Build();
 
